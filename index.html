@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Formaticos · SatisZone · Stick After Dark</title>
+<meta name="description" content="Alle Links: Formaticos (Fußball-Taktik), SatisZone (Satisfying-Loops), Stick After Dark (Dark Dilemmas). Gratis-PDF: 3 Taktik-Geheimnisse.">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="robots" content="index,follow">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0A0A0A;--karte:#141414;--text:#F2F2F2;--grau:#9A9A9A;--akzent:#EEFA1E;--streit:#D5761C;--r:16px}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ min-height:100vh;padding:20px 16px 40px}
+main{max-width:480px;margin:0 auto}
+header{padding:8px 0 18px;border-top:6px solid var(--akzent);margin-top:4px}
+header h1{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--akzent);margin-top:14px}
+header p{font-size:26px;font-weight:800;line-height:1.15;margin-top:6px}
+header small{display:block;color:var(--grau);font-size:13px;margin-top:6px}
+section{background:var(--karte);border-radius:var(--r);padding:18px 16px;margin-top:14px;border-left:4px solid var(--k)}
+section h2{font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:.02em}
+section p{color:var(--grau);font-size:14px;margin-top:2px}
+a.knopf{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:52px;padding:12px 16px;
+ margin-top:10px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;color:var(--text);
+ background:#1E1E1E;border:1px solid #2A2A2A}
+a.knopf:focus-visible{outline:3px solid var(--k);outline-offset:2px}
+a.knopf.haupt{background:var(--k);color:#0A0A0A;border-color:var(--k);font-size:17px}
+a.knopf.kauf{border-color:var(--k)}
+a.knopf span.r{font-size:12px;font-weight:600;opacity:.75;white-space:nowrap}
+a.knopf small{display:block;font-weight:500;font-size:12px;opacity:.8}
+.netze{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.netze a{display:block;text-align:center;min-height:48px;padding:13px 4px;border-radius:12px;background:#1E1E1E;
+ border:1px solid #2A2A2A;color:var(--text);text-decoration:none;font-weight:700;font-size:14px}
+.marke{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+ border:1px solid currentColor;border-radius:4px;padding:1px 5px;margin-right:6px}
+footer{color:var(--grau);font-size:12px;margin-top:22px;line-height:1.6}
+footer strong{color:var(--text)}
+footer .warn{color:var(--streit)}
+.split,.blick{display:none}
+/* ---- Design 1: Tactical Dark Grid ---- */
+body.d1{background-color:#0A0A0A;background-image:radial-gradient(circle at 50% 210px,transparent 0 118px,rgba(238,250,30,.16) 118px 120px,transparent 120px),
+ linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+ background-size:auto,28px 28px,28px 28px;background-repeat:no-repeat,repeat,repeat}
+body.d1 section{background:rgba(16,16,16,.92);border-left:0;border:1px solid #2A2A2A;border-radius:6px;position:relative}
+body.d1 section::before,body.d1 section::after{content:"";position:absolute;width:16px;height:16px;border:3px solid var(--k)}
+body.d1 section::before{top:-2px;left:-2px;border-right:0;border-bottom:0}
+body.d1 section::after{bottom:-2px;right:-2px;border-left:0;border-top:0}
+body.d1 section h2{letter-spacing:.08em}
+body.d1 a.knopf,body.d1 .netze a{border-radius:4px}
+/* ---- Design 2: High-Contrast Yellow/Black Card ---- */
+body.d2{--bg:#EEFA1E;--karte:#0A0A0A}
+body.d2 header{border-top-color:#0A0A0A}
+body.d2 header h1,body.d2 header p,body.d2 header small,body.d2 footer,body.d2 footer strong{color:#0A0A0A}
+body.d2 footer .warn{color:#7A2E00;font-weight:700}
+body.d2 section{border-left:0;border:3px solid #0A0A0A;border-radius:10px;box-shadow:7px 7px 0 #0A0A0A;margin-top:22px}
+body.d2 section h2{color:#EEFA1E}
+body.d2 section p{color:#D0D0D0}
+body.d2 a.knopf,body.d2 .netze a{min-height:56px;border:2px solid #F2F2F2;background:#0A0A0A;border-radius:8px}
+body.d2 a.knopf.haupt{background:#EEFA1E;color:#0A0A0A;border-color:#EEFA1E}
+/* ---- Design 3: Minimalist Terminal ---- */
+body.d3{--bg:#000;--karte:transparent;--grau:#8FA08F;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+body.d3 header{border-top:0}
+body.d3 header h1::before{content:"$ "}
+body.d3 header p{font-size:21px}
+body.d3 header p::after{content:"_";animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){body.d3 header p::after{animation:none}}
+body.d3 section{border-left:0;border-radius:0;border-top:1px dashed #3A3A3A;padding:18px 0}
+body.d3 section h2{font-size:18px;color:var(--k)}
+body.d3 section h2::before{content:"# "}
+body.d3 a.knopf,body.d3 .netze a{background:transparent;border:0;border-radius:0;border-bottom:1px solid #2A2A2A;padding-left:0}
+body.d3 a.knopf>span:first-child::before,body.d3 .netze a::before{content:"> ";color:var(--k)}
+body.d3 a.knopf.haupt{background:transparent;color:var(--k);border-bottom:2px solid var(--k)}
+body.d3 .netze{grid-template-columns:1fr;gap:0}
+body.d3 .netze a{text-align:left}
+/* ---- Design 4: Split-Funnel with Embedded PDF Preview ---- */
+body.d4 .split{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+body.d4 .split>*{display:flex;flex-direction:column;justify-content:space-between;min-height:168px;padding:14px 12px;
+ border-radius:var(--r);text-decoration:none;font-weight:800;font-size:17px;line-height:1.2}
+body.d4 .split .gratis{background:var(--akzent);color:#0A0A0A}
+body.d4 .split .kaufen{background:#141414;color:var(--text);border:2px solid var(--akzent)}
+body.d4 .split .bald{background:#141414;color:var(--grau);border:2px dashed #3A3A3A}
+body.d4 .split small{font-size:12px;font-weight:600;opacity:.85}
+body.d4 .split b{font-size:26px}
+body.d4 .blick{display:block;margin-top:14px}
+body.d4 .blick h2{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--grau)}
+body.d4 .blick .streifen{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 0 6px;-webkit-overflow-scrolling:touch}
+body.d4 .blick img{flex:0 0 62%;width:62%;height:auto;border-radius:10px;border:1px solid #2A2A2A;scroll-snap-align:start;background:#fff}
+body.d4 #fussball a.knopf.haupt,body.d4 #fussball a.knopf.kauf{display:none}
+body.d4 .split{grid-template-columns:2fr 3fr}
+body.d4 .split form{background:#141414;color:var(--text);border:2px solid var(--akzent);gap:8px;justify-content:flex-start}
+body.d4 .split form label{font-size:16px}
+body.d4 .split form input{width:100%;min-height:48px;border-radius:10px;font-family:inherit;font-size:16px;font-weight:700;box-sizing:border-box}
+body.d4 .split form input[type=email]{padding:0 10px;border:1px solid #6A6A6A;background:#0A0A0A;color:var(--text)}
+body.d4 .split form input[type=submit]{border:0;background:var(--akzent);color:#0A0A0A;font-weight:800;cursor:pointer}
+body.d4 .split form input:focus-visible{outline:3px solid #fff;outline-offset:2px}
+body.d4 .split form small{font-weight:500;line-height:1.3}
+</style>
+</head>
+<body class="d4">
+<main>
+<header>
+<h1>Formaticos · SatisZone · Stick After Dark</h1>
+<p>3 Kanäle. 1 Seite.</p>
+<small lang="en">Three channels. All links in one place.</small>
+</header>
+<div class="split">
+<div class="gratis"><span>3 Taktik-Geheimnisse<br><small>PDF, 3 Seiten, per E-Mail</small></span><b>0 €</b></div>
+<!-- MATEJ: ZDE VLOZ CELY HTML KOD FORMULARE Z KITU -->
+<!-- ============================================================================================
+     MATEJ: ZDE VLOZ CELY HTML KOD FORMULARE Z KITU
+     MATEJ: HIER DEN GANZEN HTML-CODE DES FORMULARS AUS KIT EINFÜGEN
+     Kit → Grow → Landing Pages & Forms → Formular → Publish → Embed → „HTML“ (NICHT „JavaScript“)
+     Besser: den Code in docs/bio/kit_form.html speichern. build_funnel.py baut ihn dann bei jedem
+     Neubau hier ein. Code direkt in dieser Datei geht beim nächsten Neubau verloren.
+     ============================================================================================ -->
+<form action="YOUR_KIT_FORM_URL" method="post" id="kit-form" target="_blank">
+<label for="kit-email">Wohin mit dem PDF?</label>
+<input type="email" name="email_address" id="kit-email" placeholder="deine@mail.de" autocomplete="email" required>
+<input type="submit" id="kit-senden" value="PDF schicken">
+<small>Du bekommst das PDF und neue Taktik per E-Mail. Abmelden mit 1 Klick.</small>
+</form>
+<!-- ENDE KIT-FORMULAR -->
+</div>
+<div class="blick">
+<h2>Blick ins PDF · Seite 1 und 2 von 3</h2>
+<div class="streifen"><img src="vorschau/seite-1.jpg" width="540" height="764" loading="lazy" alt="Gratis-PDF „3 Taktik-Geheimnisse“, Seite 1 von 3"><img src="vorschau/seite-2.jpg" width="540" height="764" loading="lazy" alt="Gratis-PDF „3 Taktik-Geheimnisse“, Seite 2 von 3"></div>
+</div>
+<section style="--k:#EEFA1E" id="fussball">
+<h2>Formaticos</h2>
+<p lang="de">Fußball-Taktik, kurz und klar.</p>
+<p lang="en">Football tactics in 30 seconds.</p>
+<div class="netze">
+<a href="https://www.tiktok.com/@formaticos" target="_blank" rel="noopener noreferrer" aria-label="Formaticos TikTok @formaticos">TikTok</a>
+<a href="https://www.instagram.com/formaticos/" target="_blank" rel="noopener noreferrer" aria-label="Formaticos Instagram @formaticos">Instagram</a>
+<a href="https://www.youtube.com/@formaticos" target="_blank" rel="noopener noreferrer" aria-label="Formaticos YouTube @formaticos">YouTube</a>
+</div>
+</section>
+<section style="--k:#40E0D0" id="satiszone">
+<h2>SatisZone</h2>
+<p lang="de">Satisfying-Loops, jeden Tag neu.</p>
+<p lang="en">Oddly satisfying loops. New every day.</p>
+<div class="netze">
+<a href="https://www.tiktok.com/@SatisZoneLab" target="_blank" rel="noopener noreferrer" aria-label="SatisZone TikTok @SatisZoneLab">TikTok</a>
+<a href="https://www.instagram.com/SatisZoneLab/" target="_blank" rel="noopener noreferrer" aria-label="SatisZone Instagram @SatisZoneLab">Instagram</a>
+<a href="https://www.youtube.com/@SatisZone_Lab" target="_blank" rel="noopener noreferrer" aria-label="SatisZone YouTube @SatisZone_Lab">YouTube</a>
+</div>
+</section>
+<section style="--k:#FFB347" id="stickman">
+<h2>Stick After Dark</h2>
+<p lang="de">Dunkle Dilemmas in 20 Sekunden.</p>
+<p lang="en">Dark dilemmas in 20 seconds. What would you do?</p>
+<div class="netze">
+<a href="https://www.tiktok.com/@stick_after_dark" target="_blank" rel="noopener noreferrer" aria-label="Stick After Dark TikTok @stick_after_dark">TikTok</a>
+<a href="https://www.instagram.com/stick.after.dark/" target="_blank" rel="noopener noreferrer" aria-label="Stick After Dark Instagram @stick.after.dark">Instagram</a>
+<a href="https://www.youtube.com/@stick-afterdark" target="_blank" rel="noopener noreferrer" aria-label="Stick After Dark YouTube @stick-afterdark">YouTube</a>
+</div>
+</section>
+<footer>
+
+<br>Die Videos sind mit KI-Werkzeugen und eigenem Code gebaut. Kein offizielles Produkt eines Vereins oder Verbands.
+<br>Diese Seite setzt keine Cookies und lädt nichts von fremden Servern.<br>Die E-Mail-Maske schickt deine Adresse an Kit (ConvertKit, USA). Dort liegt sie für den Newsletter.
+</footer>
+</main>
+</body>
+</html>
