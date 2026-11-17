@@ -63,6 +63,7 @@ h1{font-size:30px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;
 .formkit-alert-error{background:#2A1015;border:1px solid var(--rot);color:#FFB3BC}
 .formkit-alert-success{background:#0E2422;border:1px solid var(--cyan);color:#BFF6F8}
 .klein{margin-top:10px;font-size:13px;color:var(--grau)}
+.klein a{color:var(--grau);text-underline-offset:3px}
 .vorschau{margin-top:26px}
 .vorschau h3,.netze h3{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--grau);margin-bottom:10px}
 .karte{background:var(--karte);border:1px solid #24302C;border-radius:14px;overflow:hidden;margin-bottom:14px}
@@ -91,13 +92,15 @@ footer{margin-top:26px;font-size:12px;line-height:1.5;color:#8D9893;text-align:c
 @keyframes ring{0%{opacity:.55;transform:scale(.92)}70%,100%{opacity:0;transform:scale(1.18)}}
 /* ---- Einstieg ---- */
 h1{background:linear-gradient(100deg,var(--gelb) 35%,#FFFFFF 50%,var(--gelb) 65%);background-size:260% 100%;
- -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:glanz 5s ease-in-out 1s infinite}
+ -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:glanz 5s ease-in-out 1s 3}
 @keyframes glanz{0%,60%{background-position:100% 0}100%{background-position:0 0}}
 header h1,header .zeile{animation-fill-mode:both}
 .zeile{animation:hoch .6s ease-out .35s both}
-.angebot{animation:hoch .7s ease-out .5s both,puls 4s ease-in-out 2s infinite}
+.angebot{position:relative;animation:hoch .7s ease-out .5s both}
+.angebot::after{content:"";position:absolute;inset:-6px;border-radius:20px;border:2px solid rgba(238,250,30,.35);opacity:0;
+ pointer-events:none;animation:puls 4s ease-in-out 2s 4}
 @keyframes hoch{0%{opacity:0;transform:translateY(18px)}100%{opacity:1;transform:none}}
-@keyframes puls{0%,100%{box-shadow:0 0 0 0 rgba(238,250,30,0)}50%{box-shadow:0 0 0 6px rgba(238,250,30,.08)}}
+@keyframes puls{0%,100%{opacity:0}50%{opacity:1}}
 .angebot li{animation:rein .5s ease-out both}
 .angebot li:nth-child(1){animation-delay:.8s}.angebot li:nth-child(2){animation-delay:.95s}.angebot li:nth-child(3){animation-delay:1.1s}
 @keyframes rein{0%{opacity:0;transform:translateX(-14px)}100%{opacity:1;transform:none}}
@@ -106,16 +109,17 @@ header h1,header .zeile{animation-fill-mode:both}
 @keyframes punkt{0%,100%{transform:scale(1)}50%{transform:scale(1.25);border-color:var(--gelb)}}
 /* ---- Knopf ---- */
 .formkit-submit{overflow:hidden}
-.formkit-submit::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
- background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-18deg);animation:blitz 3.6s ease-in-out 1.6s infinite}
-@keyframes blitz{0%,70%{left:-60%}100%{left:130%}}
+.formkit-submit::after{content:"";position:absolute;top:0;left:0;width:40%;height:100%;pointer-events:none;
+ background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:translateX(-150%) skewX(-18deg);
+ animation:blitz 3.6s ease-in-out 1.6s infinite}
+@keyframes blitz{0%,70%{transform:translateX(-150%) skewX(-18deg)}100%{transform:translateX(330%) skewX(-18deg)}}
 .formkit-submit span{display:inline-block;transition:transform .2s}
 .formkit-submit:hover span{transform:translateX(4px)}
 /* ---- Hintergrund ---- */
-.bg .druck line{stroke-dasharray:90;stroke-dashoffset:90;animation:zieh 4.5s ease-in-out infinite}
+.bg .druck line{stroke-dasharray:90;stroke-dashoffset:90;animation:zieh 4.5s ease-in-out 3 forwards}
 .bg .druck line:nth-of-type(2){animation-delay:.6s}.bg .druck line:nth-of-type(3){animation-delay:1.2s}
 @keyframes zieh{0%{stroke-dashoffset:90}45%,70%{stroke-dashoffset:0}100%{stroke-dashoffset:-90}}
-.bg .zellen{animation:drift 18s ease-in-out infinite alternate}
+.bg .zellen{animation:drift 18s ease-in-out 2 alternate}
 @keyframes drift{0%{transform:translate(0,0)}100%{transform:translate(-14px,10px)}}
 /* ---- Karten: erscheinen beim Scrollen, Pass wird gezeichnet ---- */
 .js .zeig{opacity:0;transform:translateY(28px) scale(.98);transition:opacity .7s ease-out,transform .7s ease-out}
@@ -126,12 +130,12 @@ header h1,header .zeile{animation-fill-mode:both}
 .sichtbar .pass path,.nojs .pass path{animation:da .2s linear 1.4s forwards}
 @keyframes pass{to{stroke-dashoffset:0}}
 @keyframes da{to{opacity:1}}
-.karte .ziel{animation:zone 2.6s ease-in-out infinite}
+.karte.sichtbar .ziel,.nojs .karte .ziel{animation:zone 2.6s ease-in-out 4}
 @keyframes zone{0%,100%{fill-opacity:.12}50%{fill-opacity:.34}}
-.karte .lauf line{animation:laufen 1.2s linear infinite}
+.karte.sichtbar .lauf line,.nojs .karte .lauf line{animation:laufen 1.2s linear 6}
 @keyframes laufen{to{stroke-dashoffset:-18}}
 .karte{transition:transform .25s,border-color .25s}
-.karte:hover{transform:translateY(-3px);border-color:#3A4A44}
+.karte:hover,.js .karte.zeig.sichtbar:hover{transform:translateY(-3px);border-color:#3A4A44}
 .netze a{transition:transform .2s,border-color .2s,background .2s}
 .netze a:hover,.netze a:active{transform:translateY(-3px);border-color:var(--gelb);background:#151E1B}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}
@@ -167,7 +171,7 @@ header h1,header .zeile{animation-fill-mode:both}
 </div>
 </div>
 </form>
-<p class="klein">3 Seiten, sofort nach der Bestätigung. Dazu ab und zu neue Taktik per E-Mail. Abmelden mit 1 Klick.</p>
+<p class="klein">3 Seiten, sofort nach der Bestätigung. Dazu ab und zu neue Taktik per E-Mail. Kit misst, ob du Mails öffnest. Abmelden mit 1 Klick.</p>
 </section>
 <section class="vorschau" aria-label="Blick ins PDF">
 <h3>Blick ins PDF</h3>
