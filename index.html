@@ -3,164 +3,116 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Formaticos · SatisZone · Stick After Dark</title>
-<meta name="description" content="Alle Links: Formaticos (Fußball-Taktik), SatisZone (Satisfying-Loops), Stick After Dark (Dark Dilemmas). Gratis-PDF: 3 Taktik-Geheimnisse.">
-<meta name="theme-color" content="#0A0A0A">
-<meta name="robots" content="index,follow">
+<title>Formaticos · Gratis-PDF: 3 Taktik-Geheimnisse</title>
+<meta name="description" content="Formaticos: Fußball-Taktik in 30 Sekunden. Hol dir das Gratis-PDF mit 3 Taktik-Geheimnissen.">
+<meta name="theme-color" content="#0A0D0C">
 <style>
+:root{--gelb:#EEFA1E;--cyan:#3CE0E8;--rot:#FF4D5E;--grund:#0A0D0C;--text:#F2F5F3;--grau:#A7B2AD;--karte:#111816}
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0A0A0A;--karte:#141414;--text:#F2F2F2;--grau:#9A9A9A;--akzent:#EEFA1E;--streit:#D5761C;--r:16px}
-html{-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--text);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
- min-height:100vh;padding:20px 16px 40px}
-main{max-width:480px;margin:0 auto}
-header{padding:8px 0 18px;border-top:6px solid var(--akzent);margin-top:4px}
-header h1{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--akzent);margin-top:14px}
-header p{font-size:26px;font-weight:800;line-height:1.15;margin-top:6px}
-header small{display:block;color:var(--grau);font-size:13px;margin-top:6px}
-section{background:var(--karte);border-radius:var(--r);padding:18px 16px;margin-top:14px;border-left:4px solid var(--k)}
-section h2{font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:.02em}
-section p{color:var(--grau);font-size:14px;margin-top:2px}
-a.knopf{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:52px;padding:12px 16px;
- margin-top:10px;border-radius:12px;text-decoration:none;font-weight:700;font-size:16px;color:var(--text);
- background:#1E1E1E;border:1px solid #2A2A2A}
-a.knopf:focus-visible{outline:3px solid var(--k);outline-offset:2px}
-a.knopf.haupt{background:var(--k);color:#0A0A0A;border-color:var(--k);font-size:17px}
-a.knopf.kauf{border-color:var(--k)}
-a.knopf span.r{font-size:12px;font-weight:600;opacity:.75;white-space:nowrap}
-a.knopf small{display:block;font-weight:500;font-size:12px;opacity:.8}
-.netze{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
-.netze a{display:block;text-align:center;min-height:48px;padding:13px 4px;border-radius:12px;background:#1E1E1E;
- border:1px solid #2A2A2A;color:var(--text);text-decoration:none;font-weight:700;font-size:14px}
-.marke{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
- border:1px solid currentColor;border-radius:4px;padding:1px 5px;margin-right:6px}
-footer{color:var(--grau);font-size:12px;margin-top:22px;line-height:1.6}
-footer strong{color:var(--text)}
-footer .warn{color:var(--streit)}
-.split,.blick{display:none}
-/* ---- Design 1: Tactical Dark Grid ---- */
-body.d1{background-color:#0A0A0A;background-image:radial-gradient(circle at 50% 210px,transparent 0 118px,rgba(238,250,30,.16) 118px 120px,transparent 120px),
- linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
- background-size:auto,28px 28px,28px 28px;background-repeat:no-repeat,repeat,repeat}
-body.d1 section{background:rgba(16,16,16,.92);border-left:0;border:1px solid #2A2A2A;border-radius:6px;position:relative}
-body.d1 section::before,body.d1 section::after{content:"";position:absolute;width:16px;height:16px;border:3px solid var(--k)}
-body.d1 section::before{top:-2px;left:-2px;border-right:0;border-bottom:0}
-body.d1 section::after{bottom:-2px;right:-2px;border-left:0;border-top:0}
-body.d1 section h2{letter-spacing:.08em}
-body.d1 a.knopf,body.d1 .netze a{border-radius:4px}
-/* ---- Design 2: High-Contrast Yellow/Black Card ---- */
-body.d2{--bg:#EEFA1E;--karte:#0A0A0A}
-body.d2 header{border-top-color:#0A0A0A}
-body.d2 header h1,body.d2 header p,body.d2 header small,body.d2 footer,body.d2 footer strong{color:#0A0A0A}
-body.d2 footer .warn{color:#7A2E00;font-weight:700}
-body.d2 section{border-left:0;border:3px solid #0A0A0A;border-radius:10px;box-shadow:7px 7px 0 #0A0A0A;margin-top:22px}
-body.d2 section h2{color:#EEFA1E}
-body.d2 section p{color:#D0D0D0}
-body.d2 a.knopf,body.d2 .netze a{min-height:56px;border:2px solid #F2F2F2;background:#0A0A0A;border-radius:8px}
-body.d2 a.knopf.haupt{background:#EEFA1E;color:#0A0A0A;border-color:#EEFA1E}
-/* ---- Design 3: Minimalist Terminal ---- */
-body.d3{--bg:#000;--karte:transparent;--grau:#8FA08F;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-body.d3 header{border-top:0}
-body.d3 header h1::before{content:"$ "}
-body.d3 header p{font-size:21px}
-body.d3 header p::after{content:"_";animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-@media (prefers-reduced-motion:reduce){body.d3 header p::after{animation:none}}
-body.d3 section{border-left:0;border-radius:0;border-top:1px dashed #3A3A3A;padding:18px 0}
-body.d3 section h2{font-size:18px;color:var(--k)}
-body.d3 section h2::before{content:"# "}
-body.d3 a.knopf,body.d3 .netze a{background:transparent;border:0;border-radius:0;border-bottom:1px solid #2A2A2A;padding-left:0}
-body.d3 a.knopf>span:first-child::before,body.d3 .netze a::before{content:"> ";color:var(--k)}
-body.d3 a.knopf.haupt{background:transparent;color:var(--k);border-bottom:2px solid var(--k)}
-body.d3 .netze{grid-template-columns:1fr;gap:0}
-body.d3 .netze a{text-align:left}
-/* ---- Design 4: Split-Funnel with Embedded PDF Preview ---- */
-body.d4 .split{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-body.d4 .split>*{display:flex;flex-direction:column;justify-content:space-between;min-height:168px;padding:14px 12px;
- border-radius:var(--r);text-decoration:none;font-weight:800;font-size:17px;line-height:1.2}
-body.d4 .split .gratis{background:var(--akzent);color:#0A0A0A}
-body.d4 .split .kaufen{background:#141414;color:var(--text);border:2px solid var(--akzent)}
-body.d4 .split .bald{background:#141414;color:var(--grau);border:2px dashed #3A3A3A}
-body.d4 .split small{font-size:12px;font-weight:600;opacity:.85}
-body.d4 .split b{font-size:26px}
-body.d4 .blick{display:block;margin-top:14px}
-body.d4 .blick h2{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--grau)}
-body.d4 .blick .streifen{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 0 6px;-webkit-overflow-scrolling:touch}
-body.d4 .blick img{flex:0 0 62%;width:62%;height:auto;border-radius:10px;border:1px solid #2A2A2A;scroll-snap-align:start;background:#fff}
-body.d4 #fussball a.knopf.haupt,body.d4 #fussball a.knopf.kauf{display:none}
-body.d4 .split{grid-template-columns:2fr 3fr}
-body.d4 .split form{background:#141414;color:var(--text);border:2px solid var(--akzent);gap:8px;justify-content:flex-start}
-body.d4 .split form label{font-size:16px}
-body.d4 .split form input{width:100%;min-height:48px;border-radius:10px;font-family:inherit;font-size:16px;font-weight:700;box-sizing:border-box}
-body.d4 .split form input[type=email]{padding:0 10px;border:1px solid #6A6A6A;background:#0A0A0A;color:var(--text)}
-body.d4 .split form input[type=submit]{border:0;background:var(--akzent);color:#0A0A0A;font-weight:800;cursor:pointer}
-body.d4 .split form input:focus-visible{outline:3px solid #fff;outline-offset:2px}
-body.d4 .split form small{font-weight:500;line-height:1.3}
+html{background:var(--grund)}
+body{min-height:100vh;background:var(--grund);color:var(--text);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+ -webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden}
+.bg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+main{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:28px 16px 40px}
+header{text-align:center}
+.wappen{width:84px;height:84px;display:block;margin:0 auto 10px}
+h1{font-size:30px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--gelb)}
+.zeile{margin-top:4px;color:var(--grau);font-size:15px}
+.angebot{margin-top:22px;background:rgba(17,24,22,.92);border:2px solid var(--gelb);border-radius:16px;padding:18px 16px}
+.marke{display:inline-block;background:var(--gelb);color:#0A0D0C;font-weight:900;font-size:12px;letter-spacing:.14em;
+ text-transform:uppercase;padding:4px 8px;border-radius:6px}
+.angebot h2{margin-top:10px;font-size:26px;line-height:1.1;font-weight:900}
+.angebot h2 em{font-style:normal;color:var(--gelb)}
+.angebot ul{list-style:none;margin:12px 0 14px}
+.angebot li{padding:6px 0 6px 26px;position:relative;border-top:1px solid #1F2A26}
+.angebot li:first-child{border-top:0}
+.angebot li::before{content:"";position:absolute;left:2px;top:13px;width:12px;height:12px;border:2px solid var(--cyan);border-radius:50%}
+.angebot li b{color:var(--text)}
+.angebot li small{font-size:12px;color:var(--grau)}
+.unsichtbar{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.formkit-form{max-width:none!important}
+.formkit-fields{display:flex;flex-direction:column;gap:10px}
+.formkit-field{display:block}
+.formkit-input{width:100%;min-height:52px;border-radius:12px;border:2px solid #3A4743;background:#070A09;color:var(--text);
+ font:600 17px/1.2 inherit;font-family:inherit;padding:0 14px}
+.formkit-input::placeholder{color:#8D9893}
+.formkit-input:focus{outline:none;border-color:var(--cyan)}
+.formkit-submit{position:relative;width:100%;min-height:56px;border:0;border-radius:12px;background:var(--gelb);color:#0A0D0C;
+ font:900 17px/1.1 inherit;font-family:inherit;letter-spacing:.04em;cursor:pointer;box-shadow:0 6px 0 #9BA510}
+.formkit-submit:active{transform:translateY(3px);box-shadow:0 3px 0 #9BA510}
+.formkit-submit:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.formkit-spinner{display:none}
+.formkit-submit[data-active] .formkit-spinner{display:flex;position:absolute;inset:0;align-items:center;justify-content:center;gap:6px}
+.formkit-submit[data-active] .formkit-spinner>div{width:9px;height:9px;border-radius:50%;background:#0A0D0C;opacity:.5}
+.formkit-submit[data-active] span{opacity:0}
+.formkit-alert{list-style:none;margin:0 0 10px;padding:10px 12px;border-radius:10px;font-weight:700}
+.formkit-alert:empty{display:none}
+.formkit-alert-error{background:#2A1015;border:1px solid var(--rot);color:#FFB3BC}
+.formkit-alert-success{background:#0E2422;border:1px solid var(--cyan);color:#BFF6F8}
+.klein{margin-top:10px;font-size:13px;color:var(--grau)}
+.vorschau{margin-top:26px}
+.vorschau h3,.netze h3{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--grau);margin-bottom:10px}
+.karte{background:var(--karte);border:1px solid #24302C;border-radius:14px;overflow:hidden;margin-bottom:14px}
+.karte svg{display:block;width:100%;height:auto}
+.karte figcaption{padding:10px 14px 14px;font-size:14px;color:var(--grau)}
+.karte figcaption span{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
+.karte figcaption b{display:block;font-size:18px;color:var(--text);margin:2px 0 4px}
+.netze{margin-top:22px}
+.netze div{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.netze a{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:60px;border-radius:12px;
+ background:#111816;border:1px solid #2E3B37;color:var(--text);text-decoration:none}
+.netze a b{font-size:15px}
+.netze a span{font-size:12px;color:var(--gelb)}
+.netze a:focus-visible{outline:3px solid var(--gelb);outline-offset:2px}
+footer{margin-top:26px;font-size:12px;line-height:1.5;color:#8D9893;text-align:center}
 </style>
 </head>
-<body class="d4">
+<body>
+<svg class="bg" viewBox="0 0 400 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#FFFFFF" stroke-opacity=".07" stroke-width="1.5"><rect x="10" y="10" width="380" height="840"/><line x1="10" y1="430.0" x2="390" y2="430.0"/><circle cx="200.0" cy="430.0" r="56"/><rect x="90.0" y="10" width="220" height="120"/><rect x="90.0" y="730" width="220" height="120"/></g><line x1="80.0" y1="10" x2="80.0" y2="850" stroke="#EEFA1E" stroke-opacity=".05" stroke-dasharray="6 8"/><line x1="144.0" y1="10" x2="144.0" y2="850" stroke="#EEFA1E" stroke-opacity=".05" stroke-dasharray="6 8"/><line x1="256.0" y1="10" x2="256.0" y2="850" stroke="#EEFA1E" stroke-opacity=".05" stroke-dasharray="6 8"/><line x1="320.0" y1="10" x2="320.0" y2="850" stroke="#EEFA1E" stroke-opacity=".05" stroke-dasharray="6 8"/><path d="M10.0,450.0 L92.8,450.0 L123.9,589.9 L10.0,640.6 Z" fill="none" stroke="#3CE0E8" stroke-opacity=".07"/><path d="M92.8,450.0 L210.1,450.0 L202.9,581.1 L156.0,604.5 L123.9,589.9 Z" fill="none" stroke="#3CE0E8" stroke-opacity=".07"/><path d="M210.1,450.0 L323.6,450.0 L276.1,602.0 L264.5,607.0 L202.9,581.1 Z" fill="none" stroke="#3CE0E8" stroke-opacity=".07"/><path d="M323.6,450.0 L390.0,450.0 L390.0,640.0 L276.1,602.0 Z" fill="none" stroke="#3CE0E8" stroke-opacity=".07"/><path d="M180.5,850.0 L10.0,850.0 L10.0,640.6 L123.9,589.9 L156.0,604.5 Z" fill="none" stroke="#3CE0E8" stroke-opacity=".07"/><path d="M210.6,850.0 L180.5,850.0 L156.0,604.5 L202.9,581.1 L264.5,607.0 Z" fill="none" stroke="#3CE0E8" stroke-opacity=".07"/><path d="M390.0,640.0 L390.0,850.0 L210.6,850.0 L264.5,607.0 L276.1,602.0 Z" fill="none" stroke="#3CE0E8" stroke-opacity=".07"/><g opacity=".12"><line x1="120.0" y1="300.0" x2="175.0" y2="360.0" stroke="#FF4D5E" stroke-width="2.4" stroke-linecap="round"/><path d="M168.5,357.4 L175.0,360.0 L173.0,353.3" fill="none" stroke="#FF4D5E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><line x1="290.0" y1="300.0" x2="235.0" y2="360.0" stroke="#FF4D5E" stroke-width="2.4" stroke-linecap="round"/><path d="M237.0,353.3 L235.0,360.0 L241.5,357.4" fill="none" stroke="#FF4D5E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><line x1="200.0" y1="250.0" x2="200.0" y2="330.0" stroke="#FF4D5E" stroke-width="2.4" stroke-linecap="round"/><path d="M197.0,323.7 L200.0,330.0 L203.0,323.7" fill="none" stroke="#FF4D5E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
 <main>
 <header>
-<h1>Formaticos · SatisZone · Stick After Dark</h1>
-<p>3 Kanäle. 1 Seite.</p>
-<small lang="en">Three channels. All links in one place.</small>
+<svg class="wappen" viewBox="0 0 120 120" role="img" aria-label="Formaticos Wappen"><path d="M60 6 L108 22 V62 C108 88 86 106 60 114 C34 106 12 88 12 62 V22 Z" fill="#101614" stroke="#EEFA1E" stroke-width="4" stroke-linejoin="round"/><line x1="14" y1="60" x2="106" y2="60" stroke="#EEFA1E" stroke-opacity=".45" stroke-width="2"/><circle cx="60" cy="60" r="20" fill="none" stroke="#EEFA1E" stroke-width="3.5"/><circle cx="60" cy="60" r="4" fill="#EEFA1E"/><line x1="28.0" y1="90.0" x2="48.0" y2="72.0" stroke="#3CE0E8" stroke-width="3.5" stroke-linecap="round"/><path d="M45.4,78.5 L48.0,72.0 L41.3,74.0" fill="none" stroke="#3CE0E8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="92.0" y1="90.0" x2="72.0" y2="72.0" stroke="#FF4D5E" stroke-width="3.5" stroke-linecap="round"/><path d="M78.7,74.0 L72.0,72.0 L74.6,78.5" fill="none" stroke="#FF4D5E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><text x="60" y="38" text-anchor="middle" font-size="13" font-weight="900" fill="#EEFA1E" font-family="system-ui,sans-serif" letter-spacing="1">F</text></svg>
+<h1>Formaticos</h1>
+<p class="zeile">Fußball-Taktik in 30 Sekunden. Ohne Fachchinesisch.</p>
 </header>
-<div class="split">
-<div class="gratis"><span>3 Taktik-Geheimnisse<br><small>PDF, 3 Seiten, per E-Mail</small></span><b>0 €</b></div>
-<!-- MATEJ: ZDE VLOZ CELY HTML KOD FORMULARE Z KITU -->
-<!-- ============================================================================================
-     MATEJ: ZDE VLOZ CELY HTML KOD FORMULARE Z KITU
-     MATEJ: HIER DEN GANZEN HTML-CODE DES FORMULARS AUS KIT EINFÜGEN
-     Kit → Grow → Landing Pages & Forms → Formular → Publish → Embed → „HTML“ (NICHT „JavaScript“)
-     Besser: den Code in docs/bio/kit_form.html speichern. build_funnel.py baut ihn dann bei jedem
-     Neubau hier ein. Code direkt in dieser Datei geht beim nächsten Neubau verloren.
-     ============================================================================================ -->
-<form action="YOUR_KIT_FORM_URL" method="post" id="kit-form" target="_blank">
-<label for="kit-email">Wohin mit dem PDF?</label>
-<input type="email" name="email_address" id="kit-email" placeholder="deine@mail.de" autocomplete="email" required>
-<input type="submit" id="kit-senden" value="PDF schicken">
-<small>Du bekommst das PDF und neue Taktik per E-Mail. Abmelden mit 1 Klick.</small>
+<section class="angebot" aria-labelledby="pdf">
+<span class="marke">Gratis-PDF</span>
+<h2 id="pdf">3 Taktik-Geheimnisse, die du im <em>nächsten Spiel</em> siehst.</h2>
+<ul>
+<li><b>Raum ist die Währung.</b> Wem gehört welches Stück Rasen?</li>
+<li><b>Überladen, dann wechseln.</b> Links locken, rechts treffen.</li>
+<li><b>Erst falsch, dann logisch.</b> Warum Guardiola sagte: „Ich hasse Tiki-Taka.“ <small>(Perarnau, Pep Confidential, 2014)</small></li>
+</ul>
+<!-- KIT-FORMULAR 10200085 (Matěj, 17.11.2026). Quelle: code/monetization/build_funnel.py in MatejMusti/ClaudeM-M -->
+<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+<form action="https://app.kit.com/forms/10200085/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="10200085" data-uid="f82878aa5e" data-format="inline" data-version="5" data-options="{&quot;settings&quot;: {&quot;after_subscribe&quot;: {&quot;action&quot;: &quot;message&quot;, &quot;redirect_url&quot;: &quot;&quot;, &quot;success_message&quot;: &quot;Fast geschafft. Schau in dein Postfach und best\u00e4tige mit einem Klick: Dann kommt das PDF.&quot;}, &quot;analytics&quot;: {&quot;google&quot;: null, &quot;fathom&quot;: null, &quot;facebook&quot;: null, &quot;segment&quot;: null, &quot;pinterest&quot;: null, &quot;sparkloop&quot;: null, &quot;googletagmanager&quot;: null}, &quot;powered_by&quot;: {&quot;show&quot;: false, &quot;url&quot;: &quot;&quot;}, &quot;recaptcha&quot;: {&quot;enabled&quot;: false}, &quot;return_visitor&quot;: {&quot;action&quot;: &quot;show&quot;, &quot;custom_content&quot;: &quot;&quot;}}, &quot;version&quot;: &quot;5&quot;}" min-width="400 500 600 700 800">
+<div data-style="clean">
+<ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+<div data-element="fields" data-stacked="true" class="seva-fields formkit-fields">
+<label class="formkit-field" for="kit-email"><span class="unsichtbar">E-Mail-Adresse</span>
+<input class="formkit-input" id="kit-email" name="email_address" type="email" placeholder="Deine E-Mail-Adresse..." autocomplete="email" required></label>
+<button data-element="submit" class="formkit-submit" type="submit"><div class="formkit-spinner"><div></div><div></div><div></div></div><span>KOSTENLOSES PDF SICHERN →</span></button>
+</div>
+</div>
 </form>
-<!-- ENDE KIT-FORMULAR -->
-</div>
-<div class="blick">
-<h2>Blick ins PDF · Seite 1 und 2 von 3</h2>
-<div class="streifen"><img src="vorschau/seite-1.jpg" width="540" height="764" loading="lazy" alt="Gratis-PDF „3 Taktik-Geheimnisse“, Seite 1 von 3"><img src="vorschau/seite-2.jpg" width="540" height="764" loading="lazy" alt="Gratis-PDF „3 Taktik-Geheimnisse“, Seite 2 von 3"></div>
-</div>
-<section style="--k:#EEFA1E" id="fussball">
-<h2>Formaticos</h2>
-<p lang="de">Fußball-Taktik, kurz und klar.</p>
-<p lang="en">Football tactics in 30 seconds.</p>
-<div class="netze">
-<a href="https://www.tiktok.com/@formaticos" target="_blank" rel="noopener noreferrer" aria-label="Formaticos TikTok @formaticos">TikTok</a>
-<a href="https://www.instagram.com/formaticos/" target="_blank" rel="noopener noreferrer" aria-label="Formaticos Instagram @formaticos">Instagram</a>
-<a href="https://www.youtube.com/@formaticos" target="_blank" rel="noopener noreferrer" aria-label="Formaticos YouTube @formaticos">YouTube</a>
-</div>
+<p class="klein">3 Seiten, sofort nach der Bestätigung. Dazu ab und zu neue Taktik per E-Mail. Abmelden mit 1 Klick.</p>
 </section>
-<section style="--k:#40E0D0" id="satiszone">
-<h2>SatisZone</h2>
-<p lang="de">Satisfying-Loops, jeden Tag neu.</p>
-<p lang="en">Oddly satisfying loops. New every day.</p>
-<div class="netze">
-<a href="https://www.tiktok.com/@SatisZoneLab" target="_blank" rel="noopener noreferrer" aria-label="SatisZone TikTok @SatisZoneLab">TikTok</a>
-<a href="https://www.instagram.com/SatisZoneLab/" target="_blank" rel="noopener noreferrer" aria-label="SatisZone Instagram @SatisZoneLab">Instagram</a>
-<a href="https://www.youtube.com/@SatisZone_Lab" target="_blank" rel="noopener noreferrer" aria-label="SatisZone YouTube @SatisZone_Lab">YouTube</a>
-</div>
+<section class="vorschau" aria-label="Blick ins PDF">
+<h3>Blick ins PDF</h3>
+<figure class="karte"><svg viewBox="0 0 300 210" role="img" aria-label="Schema wie im PDF: Voronoi-Zonen, die größte Zelle orange"><rect width="300" height="210" rx="10" fill="#101614"/><g fill="none" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"><rect x="6" y="6" width="288" height="198" rx="2"/><rect x="60.0" y="6" width="180.0" height="54.6"/><rect x="111.0" y="6" width="78.0" height="21.0"/><path d="M108.0,60.6 A42.0,42.0 0 0 0 192.0,60.6"/><path d="M102.0,204 A48.0,48.0 0 0 1 198.0,204"/></g><path d="M6.0,6.0 L68.2,6.0 L77.6,90.0 L70.4,98.4 L6.0,87.7 Z" fill="#EEFA1E" fill-opacity="0.1" stroke="#EEFA1E" stroke-opacity="0.55" stroke-width="1"/><path d="M68.2,6.0 L130.0,6.0 L130.0,90.0 L77.6,90.0 Z" fill="#EEFA1E" fill-opacity="0.1" stroke="#EEFA1E" stroke-opacity="0.55" stroke-width="1"/><path d="M130.0,6.0 L191.8,6.0 L182.4,90.0 L130.0,90.0 Z" fill="#EEFA1E" fill-opacity="0.1" stroke="#EEFA1E" stroke-opacity="0.55" stroke-width="1"/><path d="M191.8,6.0 L294.0,6.0 L294.0,61.0 L206.1,117.7 L182.4,90.0 Z" fill="#EEFA1E" fill-opacity="0.1" stroke="#EEFA1E" stroke-opacity="0.55" stroke-width="1"/><path d="M73.8,204.0 L6.0,204.0 L6.0,87.7 L70.4,98.4 Z" fill="#EEFA1E" fill-opacity="0.1" stroke="#EEFA1E" stroke-opacity="0.55" stroke-width="1"/><path d="M130.0,204.0 L73.8,204.0 L70.4,98.4 L77.6,90.0 L130.0,90.0 Z" fill="#EEFA1E" fill-opacity="0.1" stroke="#EEFA1E" stroke-opacity="0.55" stroke-width="1"/><path d="M191.4,204.0 L130.0,204.0 L130.0,90.0 L182.4,90.0 L206.1,117.7 Z" fill="#EEFA1E" fill-opacity="0.1" stroke="#EEFA1E" stroke-opacity="0.55" stroke-width="1"/><path d="M294.0,61.0 L294.0,204.0 L191.4,204.0 L206.1,117.7 Z" fill="#FF9B41" fill-opacity="0.3" stroke="#EEFA1E" stroke-opacity="0.55" stroke-width="1"/><circle cx="48.0" cy="70.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="102.0" cy="64.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="158.0" cy="64.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="212.0" cy="70.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="40.0" cy="118.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="102.0" cy="116.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="158.0" cy="116.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="252.0" cy="132.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="130.0" cy="150.0" r="5.5" fill="#3CE0E8" stroke="#0A0D0C" stroke-width="2"/><circle cx="76.0" cy="172.0" r="5.5" fill="#3CE0E8" stroke="#0A0D0C" stroke-width="2"/><circle cx="196.0" cy="168.0" r="5.5" fill="#3CE0E8" stroke="#0A0D0C" stroke-width="2"/><circle cx="232.0" cy="190.0" r="5.5" fill="#3CE0E8" stroke="#0A0D0C" stroke-width="2"/><line x1="196.0" y1="168.0" x2="246.0" y2="112.0" stroke="#FF9B41" stroke-width="2.4" stroke-linecap="round"/><path d="M244.1,118.7 L246.0,112.0 L239.5,114.7" fill="none" stroke="#FF9B41" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><figcaption><span>Seite 2 von 3</span><b>Raum ist die Währung</b>Jede Zelle gehört dem Verteidiger, der am nächsten steht. Die große Zelle ist das Ziel.</figcaption></figure>
+<figure class="karte"><svg viewBox="0 0 300 210" role="img" aria-label="Schema wie im PDF: Block links verschoben, freie Zone rechts orange"><rect width="300" height="210" rx="10" fill="#101614"/><g fill="none" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"><rect x="6" y="6" width="288" height="198" rx="2"/><rect x="60.0" y="6" width="180.0" height="54.6"/><rect x="111.0" y="6" width="78.0" height="21.0"/><path d="M108.0,60.6 A42.0,42.0 0 0 0 192.0,60.6"/><path d="M102.0,204 A48.0,48.0 0 0 1 198.0,204"/></g><rect x="186" y="8" width="108" height="194" fill="#FF9B41" fill-opacity="0.14" stroke="#FF9B41" stroke-opacity="0.7" stroke-dasharray="4 4"/><path d="M6.0,6.0 L28.4,6.0 L44.6,86.9 L34.7,93.1 L6.0,90.2 Z" fill="#EEFA1E" fill-opacity="0.07" stroke="#EEFA1E" stroke-opacity="0.35" stroke-width="1"/><path d="M28.4,6.0 L68.3,6.0 L73.2,84.4 L64.8,89.6 L44.6,86.9 Z" fill="#EEFA1E" fill-opacity="0.07" stroke="#EEFA1E" stroke-opacity="0.35" stroke-width="1"/><path d="M68.3,6.0 L115.8,6.0 L101.3,88.2 L73.2,84.4 Z" fill="#EEFA1E" fill-opacity="0.07" stroke="#EEFA1E" stroke-opacity="0.35" stroke-width="1"/><path d="M115.8,6.0 L294.0,6.0 L294.0,116.0 L101.5,88.5 L101.3,88.2 Z" fill="#EEFA1E" fill-opacity="0.07" stroke="#EEFA1E" stroke-opacity="0.35" stroke-width="1"/><path d="M42.6,204.0 L6.0,204.0 L6.0,90.2 L34.7,93.1 Z" fill="#EEFA1E" fill-opacity="0.07" stroke="#EEFA1E" stroke-opacity="0.35" stroke-width="1"/><path d="M71.9,204.0 L42.6,204.0 L34.7,93.1 L44.6,86.9 L64.8,89.6 Z" fill="#EEFA1E" fill-opacity="0.07" stroke="#EEFA1E" stroke-opacity="0.35" stroke-width="1"/><path d="M87.9,204.0 L71.9,204.0 L64.8,89.6 L73.2,84.4 L101.3,88.2 L101.5,88.5 Z" fill="#EEFA1E" fill-opacity="0.07" stroke="#EEFA1E" stroke-opacity="0.35" stroke-width="1"/><path d="M294.0,116.0 L294.0,204.0 L87.9,204.0 L101.5,88.5 Z" fill="#EEFA1E" fill-opacity="0.07" stroke="#EEFA1E" stroke-opacity="0.35" stroke-width="1"/><circle cx="26.0" cy="72.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="56.0" cy="66.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="88.0" cy="64.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="122.0" cy="70.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="22.0" cy="112.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="50.0" cy="110.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="82.0" cy="108.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="116.0" cy="112.0" r="6" fill="#FF4D5E" stroke="#0A0D0C" stroke-width="2"/><circle cx="36.0" cy="160.0" r="6.5" fill="#3CE0E8" stroke="#0A0D0C" stroke-width="2"/><circle cx="70.0" cy="140.0" r="6.5" fill="#3CE0E8" stroke="#0A0D0C" stroke-width="2"/><circle cx="30.0" cy="98.0" r="6.5" fill="#3CE0E8" stroke="#0A0D0C" stroke-width="2"/><circle cx="110.0" cy="176.0" r="6.5" fill="#3CE0E8" stroke="#0A0D0C" stroke-width="2"/><circle cx="240.0" cy="96.0" r="6.5" fill="#3CE0E8" stroke="#0A0D0C" stroke-width="2"/><circle cx="156.0" cy="140.0" r="6.5" fill="#3CE0E8" stroke="#0A0D0C" stroke-width="2"/><line x1="36.0" y1="160.0" x2="66.0" y2="144.0" stroke="#3CE0E8" stroke-width="2" stroke-linecap="round"/><path d="M61.9,149.7 L66.0,144.0 L59.0,144.3" fill="none" stroke="#3CE0E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="70.0" y1="140.0" x2="36.0" y2="104.0" stroke="#3CE0E8" stroke-width="2" stroke-linecap="round"/><path d="M42.5,106.5 L36.0,104.0 L38.1,110.7" fill="none" stroke="#3CE0E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="30.0" y1="98.0" x2="66.0" y2="136.0" stroke="#3CE0E8" stroke-width="2" stroke-linecap="round"/><path d="M59.5,133.5 L66.0,136.0 L63.9,129.3" fill="none" stroke="#3CE0E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="72.0" y1="136.0" x2="232.0" y2="98.0" stroke="#FF9B41" stroke-width="3" stroke-linecap="round"/><path d="M226.6,102.4 L232.0,98.0 L225.2,96.5" fill="none" stroke="#FF9B41" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><line x1="242.0" y1="90.0" x2="232.0" y2="36.0" stroke="#EEFA1E" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="5 4"/><path d="M236.1,41.6 L232.0,36.0 L230.2,42.8" fill="none" stroke="#EEFA1E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><figcaption><span>Seite 3 von 3</span><b>Überladen, dann wechseln</b>Kurze Pässe links ziehen den Block rüber. Der lange Ball geht in den freien Raum rechts.</figcaption></figure>
 </section>
-<section style="--k:#FFB347" id="stickman">
-<h2>Stick After Dark</h2>
-<p lang="de">Dunkle Dilemmas in 20 Sekunden.</p>
-<p lang="en">Dark dilemmas in 20 seconds. What would you do?</p>
-<div class="netze">
-<a href="https://www.tiktok.com/@stick_after_dark" target="_blank" rel="noopener noreferrer" aria-label="Stick After Dark TikTok @stick_after_dark">TikTok</a>
-<a href="https://www.instagram.com/stick.after.dark/" target="_blank" rel="noopener noreferrer" aria-label="Stick After Dark Instagram @stick.after.dark">Instagram</a>
-<a href="https://www.youtube.com/@stick-afterdark" target="_blank" rel="noopener noreferrer" aria-label="Stick After Dark YouTube @stick-afterdark">YouTube</a>
+<section class="netze" aria-label="Formaticos folgen">
+<h3>Folgen</h3>
+<div>
+<a href="https://www.tiktok.com/@formaticos" target="_blank" rel="noopener noreferrer" aria-label="Formaticos auf TikTok (@formaticos)"><b>TikTok</b><span>@formaticos</span></a>
+<a href="https://www.instagram.com/formaticos/" target="_blank" rel="noopener noreferrer" aria-label="Formaticos auf Instagram (@formaticos)"><b>Instagram</b><span>@formaticos</span></a>
+<a href="https://www.youtube.com/@formaticos/shorts" target="_blank" rel="noopener noreferrer" aria-label="Formaticos auf YouTube (@formaticos)"><b>YouTube</b><span>@formaticos</span></a>
 </div>
 </section>
 <footer>
-
-<br>Die Videos sind mit KI-Werkzeugen und eigenem Code gebaut. Kein offizielles Produkt eines Vereins oder Verbands.
-<br>Diese Seite setzt keine Cookies und lädt nichts von fremden Servern.<br>Die E-Mail-Maske schickt deine Adresse an Kit (ConvertKit, USA). Dort liegt sie für den Newsletter.
+Die Videos sind mit KI-Werkzeugen und eigenem Code gebaut. Kein offizielles Produkt eines Vereins oder Verbands.<br>
+Die Anmeldung läuft über Kit (USA). Deine Adresse liegt dort nur für den Newsletter.
 </footer>
 </main>
 </body>
